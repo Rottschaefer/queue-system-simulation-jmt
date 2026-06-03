@@ -1,0 +1,4 @@
+
+DEBUG [DispatcherThread]- Measure Cliente_System Number of Customers finished. Mean value: 6.1425309496845095 Success = true 
+DEBUG [DispatcherThread]- Measure Cliente_System Response Time finished. Mean value: 1.546704909996586 Success = true 
+DEBUG [DispatcherThread]- Measure Fila com 5 servidores_Cliente_Queue Time finished. Mean value: 0.5501108205969217 Success = false 

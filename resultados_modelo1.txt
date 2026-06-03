@@ -1,0 +1,4 @@
+
+ Measure Cliente_System Number of Customers finished. Mean value: 0.14306878933837622 Success = true 
+ Measure Cliente_System Response Time finished. Mean value: 0.2856602392935777 Success = true 
+ Measure Servidor_Cliente_Queue Time finished. Mean value: 0.03559957099447724 Success = true 

@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\begin{document}
+
+\title{Trabalho Avaliação de Desempenho}
+\author{Eduardo Rottschaefer Oliveira \\ Universidade Federal Fluminense}
+\date{\today}
+
+
+\maketitle
+
+\section{Introdução}
+Este trabalho apresenta a modelagem e análise de quatro sistemas de filas utilizando a ferramenta Java Modelling Tools (JMT). Foram desenvolvidos modelos clássicos de Teoria de Filas e comparados os resultados analíticos com os resultados obtidos por simulação.
+
+\section{Resultados}
+
+\subsection{Modelo 1}
+\subsubsection{Topologia}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{topologias/modelo1.png}
+    \caption{Topologia do Modelo 1}
+    \label{fig:modelo1}
+\end{figure}
+
+\subsubsection{Solução Analítica}
+
+O Modelo 1 corresponde a um sistema de filas M/M/1, composto por um único servidor, chegadas segundo um Processo de Poisson e tempos de serviço exponencialmente distribuídos.
+
+Temos como dados de entrada:
+
+\[
+\lambda = 2 \text{ clientes/u.t.}
+\]
+
+\[
+{ E[X]} = 0.25 \text{ u.t.}
+\]
+
+
+O tempo médio que cada cliente passa no sistema é calculado por:
+
+\[
+{E[W]} = \frac{E[X]}{1-\lambda\cdot{E[X]}} = 0.5 \text{ u.t}
+\]
+
+O número médio de clientes no sistema é calculado por::
+
+\[
+L = {E[W]}\cdot{\lambda} = 1 \text{ cliente}
+\]
+
+O tempo médio de espera na fila pode ser obtido pela equação:
+
+\[
+E[W_Q] = E[W] - E[X] = 0.25 \text{ u.t.}
+\]
+
+\subsubsection{Resultados da Simulação}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Medida} & \textbf{Valor}\\
+        \hline
+        E[W] & 0.5023682015753331 \\
+        \hline
+        L & 1.0057949821148777\\
+        \hline
+        $E[W_Q]$ & 0.24890073361364587\\
+        \hline
+    \end{tabular}
+    \caption{Resultados da simulação para o Modelo 1}
+    \label{tab:simulacao-modelo1}
+\end{table}
+
+
+\subsubsection{Tabela Comparativa}
+% % Inserir aqui a tabela com a comparação dos resultados analíticos e simulados para o Modelo 1
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Medida} & \textbf{Valor teórico} & \textbf{Valor simulado} & \textbf{Diferença (\%)} \\
+        \hline
+        $E[W]$ & 0.5 & 0.5023682015753331 & 0.4736 \\
+        \hline
+        $L$ & 1.0 & 1.0057949821148777 & 0.5795 \\
+        \hline
+        $E[W_Q]$ & 0.25 & 0.24890073361364587 & 0.4397 \\
+        \hline
+    \end{tabular}
+    \caption{Tabela comparativa entre os valores teóricos e simulados para o Modelo 1}
+    \label{tab:comparacao-modelo1}
+\end{table}
+
+\noindent Diferença percentual calculada por $\left|\frac{\text{simulado} - \text{teórico}}{\text{teórico}}\right| \times 100$.
+
+\subsection{Modelo 2}
+\subsubsection{Topologia}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{topologias/modelo2.png}
+    \caption{Topologia do Modelo 2}
+    \label{fig:modelo2}
+\end{figure}
+
+\subsubsection{Solução Analítica}
+% % Inserir aqui os cálculos da solução analítica para o Modelo 2
+
+% \subsubsection{Resultados da Simulação}
+% % Inserir aqui os resultados obtidos na simulação para o Modelo 2
+
+% \subsubsection{Tabela Comparativa}
+% % Inserir aqui a tabela com a comparação dos resultados analíticos e simulados para o Modelo 2
+
+% \subsection{Modelo 3}
+% \subsubsection{Topologia}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{topologias/modelo3.png}
+%     \caption{Topologia do Modelo 3}
+%     \label{fig:modelo3}
+% \end{figure}
+
+% \subsubsection{Solução Analítica}
+% % Inserir aqui os cálculos da solução analítica para o Modelo 3
+
+% \subsubsection{Resultados da Simulação}
+% % Inserir aqui os resultados obtidos na simulação para o Modelo 3
+
+% \subsubsection{Tabela Comparativa}
+% % Inserir aqui a tabela com a comparação dos resultados analíticos e simulados para o Modelo 3
+
+% \subsection{Modelo 4}
+% \subsubsection{Topologia}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{topologias/modelo4.png}
+%     \caption{Topologia do Modelo 4}
+%     \label{fig:modelo4}
+% \end{figure}
+
+% \subsubsection{Solução Analítica}
+% % Inserir aqui os cálculos da solução analítica para o Modelo 4
+
+% \subsubsection{Resultados da Simulação}
+% % Inserir aqui os resultados obtidos na simulação para o Modelo 4
+
+% \subsubsection{Tabela Comparativa}
+% % Inserir aqui a tabela com a comparação dos resultados analíticos e simulados para o Modelo 4
+
+% \section{Conclusão}
+% % Conclusões do trabalho
+
+% \bibliographystyle{plain}
+% % \bibliography{referencias} % Crie um arquivo referencias.bib para as referências
+
+\end{document}

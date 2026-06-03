@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
-<archive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="modelo1.jsimg" timestamp="Wed Jun 03 16:19:43 GMT-03:00 2026" xsi:noNamespaceSchemaLocation="Archive.xsd">
+<archive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="modelo1.jsimg" timestamp="Wed Jun 03 18:25:02 GMT-03:00 2026" xsi:noNamespaceSchemaLocation="Archive.xsd">
     <sim disableStatisticStop="false" logDecimalSeparator="," logDelimiter=";" logPath="/home/eduardo/JMT" logReplaceMode="0" maxEvents="-1" maxSamples="1000000" name="modelo1.jsimg" polling="1.0" xsi:noNamespaceSchemaLocation="SIMmodeldefinition.xsd">
         <userClass name="Cliente" priority="0" referenceSource="Source 1" softDeadline="0.0" type="open"/>
         <node name="Sink 1">
@@ -94,7 +94,7 @@
                         <subParameter classPath="jmt.engine.random.Exponential" name="Exponential"/>
                         <subParameter classPath="jmt.engine.random.ExponentialPar" name="distrPar">
                             <subParameter classPath="java.lang.Double" name="lambda">
-                                <value>0.5</value>
+                                <value>2.0</value>
                             </subParameter>
                         </subParameter>
                     </subParameter>
@@ -126,19 +126,23 @@
             <position angle="0.0" rotate="false" x="274.0" y="235.0"/>
         </station>
     </jmodel>
-    <results elapsedTime="1783" logDecimalSeparator="," logDelimiter=";" pollingInterval="1.0" xsi:noNamespaceSchemaLocation="Results.xsd">
-        <measure alpha="0.99" analyzedSamples="81920" discardedSamples="0" finalValue="0.14306878933837622" logFile="/home/eduardo/JMT/Cliente_System Number of Customers.csv" name="Cliente_System Number of Customers" nodeType="" precision="0.03" referenceClass="Cliente" referenceStation="" state="1" type="14">
-            <sample lastIntervalAvgValue="0.13885238006449246" meanValue="0.13885238006449246" simulationTime="1048.6401597717518"/>
-            <sample lastIntervalAvgValue="0.14298906883920365" lowerBound="0.13956799446669693" meanValue="0.14306878933837622" simulationTime="81652.913708028" upperBound="0.1465695842100555"/>
+    <results elapsedTime="3482" logDecimalSeparator="," logDelimiter=";" pollingInterval="1.0" xsi:noNamespaceSchemaLocation="Results.xsd">
+        <measure alpha="0.99" analyzedSamples="368640" discardedSamples="805" finalValue="1.0057949821148777" logFile="/home/eduardo/JMT/Cliente_System Number of Customers.csv" name="Cliente_System Number of Customers" nodeType="" precision="0.03" referenceClass="Cliente" referenceStation="" state="1" type="14">
+            <sample lastIntervalAvgValue="0.5120866408866002" meanValue="0.5120866408866002" simulationTime="16.811673781450143"/>
+            <sample lastIntervalAvgValue="1.0020540377462464" lowerBound="0.9658067642415625" meanValue="0.9998603857011016" simulationTime="51041.47882205519" upperBound="1.0339140071606405"/>
+            <sample lastIntervalAvgValue="1.0072540113753332" lowerBound="0.9838591272473426" meanValue="1.0057949821148777" simulationTime="92185.84700924321" upperBound="1.0277308369824127"/>
         </measure>
-        <measure alpha="0.99" analyzedSamples="48640" discardedSamples="2895" finalValue="0.2856602392935777" logFile="/home/eduardo/JMT/Cliente_System Response Time.csv" name="Cliente_System Response Time" nodeType="" precision="0.03" referenceClass="Cliente" referenceStation="" state="1" type="15">
-            <sample lastIntervalAvgValue="0.2849436047270399" meanValue="0.2849436047270399" simulationTime="1046.4367050255794"/>
-            <sample lastIntervalAvgValue="0.2862835910730135" lowerBound="0.2786995457328364" meanValue="0.2856602392935777" simulationTime="102623.7117470786" upperBound="0.292620932854319"/>
+        <measure alpha="0.99" analyzedSamples="122880" discardedSamples="400" finalValue="0.5023682015753331" logFile="/home/eduardo/JMT/Cliente_System Response Time.csv" name="Cliente_System Response Time" nodeType="" precision="0.03" referenceClass="Cliente" referenceStation="" state="1" type="15">
+            <sample lastIntervalAvgValue="0.31092165500727087" meanValue="0.31092165500727087" simulationTime="16.811673781450143"/>
+            <sample lastIntervalAvgValue="0.5003816602837112" lowerBound="0.48172532287998804" meanValue="0.5021157447175263" simulationTime="51041.368957520615" upperBound="0.5225061665550645"/>
+            <sample lastIntervalAvgValue="0.5081449188457094" lowerBound="0.4890949631098926" meanValue="0.5023682015753331" simulationTime="61591.635560353614" upperBound="0.5156414400407736"/>
         </measure>
-        <measure alpha="0.99" analyzedSamples="286160" discardedSamples="1000" finalValue="0.03559957099447724" logFile="/home/eduardo/JMT/Servidor_Cliente_Queue Time.csv" name="Servidor_Cliente_Queue Time" nodeType="station" precision="0.03" referenceClass="Cliente" referenceStation="Servidor" state="1" type="1">
-            <sample lastIntervalAvgValue="0.038927909015898876" meanValue="0.038927909015898876" simulationTime="1048.6401597717518"/>
-            <sample lastIntervalAvgValue="0.036102906772356926" lowerBound="0.03390330062521634" meanValue="0.03669059434023993" simulationTime="242892.60245489288" upperBound="0.039477888055263526"/>
-            <sample lastIntervalAvgValue="0.03543038648815658" lowerBound="0.03474730065945236" meanValue="0.03559957099447724" simulationTime="572692.4018232849" upperBound="0.03645184132950212"/>
+        <measure alpha="0.99" analyzedSamples="573440" discardedSamples="400" finalValue="0.24890073361364587" logFile="/home/eduardo/JMT/Servidor_Cliente_Queue Time.csv" name="Servidor_Cliente_Queue Time" nodeType="station" precision="0.03" referenceClass="Cliente" referenceStation="Servidor" state="1" type="1">
+            <sample lastIntervalAvgValue="0.09083004463333569" meanValue="0.09083004463333569" simulationTime="16.811673781450143"/>
+            <sample lastIntervalAvgValue="0.25074274963569915" lowerBound="0.23709109933735895" meanValue="0.25199461117437566" simulationTime="51041.47882205519" upperBound="0.2668981230113924"/>
+            <sample lastIntervalAvgValue="0.24832476667220252" lowerBound="0.23996271333784353" meanValue="0.24966986830772803" simulationTime="142359.52490947078" upperBound="0.25937702327761253"/>
+            <sample lastIntervalAvgValue="0.24630547026137592" lowerBound="0.24130575052748723" meanValue="0.24889578550061361" simulationTime="249227.378318174" upperBound="0.25648582047374"/>
+            <sample lastIntervalAvgValue="0.2555709806444657" lowerBound="0.2443194443000592" meanValue="0.24890073361364587" simulationTime="286748.3452709048" upperBound="0.25348202292723254"/>
         </measure>
     </results>
 </archive>

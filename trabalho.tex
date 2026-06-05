@@ -176,7 +176,7 @@ E[W] \approx 1.06 \text{ u.t}
         $\textit{Drop Rate} $ &  0.017412819279805602\\
         \hline
     \end{tabular}
-    \caption{Resultados da simulação para o Modelo 1}
+    \caption{Resultados da simulação para o Modelo 2}
     \label{tab:simulacao-modelo2}
 \end{table}
 \subsubsection{Tabela Comparativa}
@@ -205,33 +205,117 @@ E[W] \approx 1.06 \text{ u.t}
     \label{fig:modelo3}
 \end{figure}
 
+\subsubsection{Resultados da Simulação}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Medida} & \textbf{Valor}\\
+        \hline
+        L & 6.1425309496845095 \\
+        \hline
+        E[W] & 1.5467049099965863\\
+        \hline
+        $E[W_Q]$ & 0.5501108205969217\\
+        \hline
+
+    \end{tabular}
+    \caption{Resultados da simulação para o Modelo 3}
+    \label{tab:simulacao-modelo3}
+\end{table}
+
+\subsection{Modelo 4}
+
+\subsubsection{Topologia}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{topologias/modelo4.png}
+    \caption{Topologia do Modelo 4}
+    \label{fig:modelo4}
+\end{figure}
+
 \subsubsection{Solução Analítica}
-% % Inserir aqui os cálculos da solução analítica para o Modelo 3
+O Modelo 4 corresponde a um sistema de filas M/M/1, composto por dois servidores, chegadas segundo um Processo de Poisson e tempos de serviço exponencialmente distribuídos.
 
-% \subsubsection{Resultados da Simulação}
-% % Inserir aqui os resultados obtidos na simulação para o Modelo 3
+Temos como dados de entrada:
 
-% \subsubsection{Tabela Comparativa}
-% % Inserir aqui a tabela com a comparação dos resultados analíticos e simulados para o Modelo 3
+\[
+\lambda = 2 \text{ clientes/u.t.}
+\]
 
-% \subsection{Modelo 4}
-% \subsubsection{Topologia}
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{topologias/modelo4.png}
-%     \caption{Topologia do Modelo 4}
-%     \label{fig:modelo4}
-% \end{figure}
+\[
+{ E[X_1]} = \frac{1}{3} \text{ u.t.}
+\]
 
-% \subsubsection{Solução Analítica}
-% % Inserir aqui os cálculos da solução analítica para o Modelo 4
+\[
+{ E[X_2]} = 0.25 \text{ u.t.}
+\]
 
-% \subsubsection{Resultados da Simulação}
+
+
+O tempo médio que cada cliente passa no sistema é calculado pela soma:
+
+\[
+{E[W]} = E[W_1] + E[W_2]
+\]
+
+Temos que:
+
+\[
+{E[W_1]} = \frac{E[X_1]}{1-\lambda\cdot{E[X_1]}} = 1 \text{ u.t}
+\]
+
+\[
+{E[W_2]} = \frac{E[X_2]}{1-\lambda\cdot{E[X_2]}} = 0.5 \text{ u.t}
+\]
+
+Logo:
+\[
+{E[W]} = 1.5 \text{ u.t}
+\]
+
+O número médio de clientes no sistema é calculado por::
+
+\[
+L = {E[W]}\cdot{\lambda} = 3 \text{ clientes}
+\]
+
+\subsubsection{Resultados da Simulação}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Medida} & \textbf{Valor}\\
+        \hline
+        L & 3.010351781253725 \\
+        \hline
+        E[W] & 1.5100325860040056\\
+        \hline
+
+    \end{tabular}
+    \caption{Resultados da simulação para o Modelo 4}
+    \label{tab:simulacao-modelo4}
+\end{table}
 % % Inserir aqui os resultados obtidos na simulação para o Modelo 4
 
-% \subsubsection{Tabela Comparativa}
-% % Inserir aqui a tabela com a comparação dos resultados analíticos e simulados para o Modelo 4
+\subsubsection{Tabela Comparativa}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Medida} & \textbf{Valor teórico} & \textbf{Valor simulado} & \textbf{Diferença (\%)} \\
+        \hline
+        $L$ & 3 & 3.010351781253725 & 0.345059375 \\ 
+        \hline
+        $E[W]$ & 1.5 & 1.5100325860040056 & 0.668839067 \\
+        \hline
+    \end{tabular}
+    \caption{Tabela comparativa entre os valores teóricos e simulados para o Modelo 2}
+    \label{tab:comparacao-modelo4}
+\end{table}
 % \section{Conclusão}
 % % Conclusões do trabalho
 

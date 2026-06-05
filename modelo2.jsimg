@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
-<archive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="modelo2.jsimg" timestamp="Wed Jun 03 16:11:46 GMT-03:00 2026" xsi:noNamespaceSchemaLocation="Archive.xsd">
+<archive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="modelo2.jsimg" timestamp="Fri Jun 05 18:18:34 GMT-03:00 2026" xsi:noNamespaceSchemaLocation="Archive.xsd">
     <sim disableStatisticStop="false" logDecimalSeparator="," logDelimiter=";" logPath="/home/eduardo/JMT" logReplaceMode="0" maxEvents="-1" maxSamples="1000000" name="modelo2.jsimg" polling="1.0" xsi:noNamespaceSchemaLocation="SIMmodeldefinition.xsd">
         <userClass name="Cliente" priority="0" referenceSource="Source 1" softDeadline="0.0" type="open"/>
         <node name="Sink 1">
@@ -94,7 +94,7 @@
                         <subParameter classPath="jmt.engine.random.Exponential" name="Exponential"/>
                         <subParameter classPath="jmt.engine.random.ExponentialPar" name="distrPar">
                             <subParameter classPath="java.lang.Double" name="lambda">
-                                <value>0.5</value>
+                                <value>2.0</value>
                             </subParameter>
                         </subParameter>
                     </subParameter>

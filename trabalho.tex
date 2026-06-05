@@ -88,7 +88,7 @@ E[W_Q] = E[W] - E[X] = 0.25 \text{ u.t.}
         \hline
         \textbf{Medida} & \textbf{Valor teórico} & \textbf{Valor simulado} & \textbf{Diferença (\%)} \\
         \hline
-        $E[W]$ & 0.5 & 0.5023682015753331 & 0.4736 \\
+        $E[W]$ & 0.5 & 0.5023682015753331 & 0,4736403 \\
         \hline
         $L$ & 1.0 & 1.0057949821148777 & 0.5795 \\
         \hline
@@ -111,24 +111,101 @@ E[W_Q] = E[W] - E[X] = 0.25 \text{ u.t.}
 \end{figure}
 
 \subsubsection{Solução Analítica}
-% % Inserir aqui os cálculos da solução analítica para o Modelo 2
+O Modelo 1 corresponde a um sistema de filas M/M/1/b, composto por um único servidor, chegadas segundo um Processo de Poisson, tempos de serviço exponencialmente distribuídos e fila finita.
 
-% \subsubsection{Resultados da Simulação}
-% % Inserir aqui os resultados obtidos na simulação para o Modelo 2
+Temos como dados de entrada:
 
-% \subsubsection{Tabela Comparativa}
-% % Inserir aqui a tabela com a comparação dos resultados analíticos e simulados para o Modelo 2
+\[
+\lambda = 2 \text{ clientes/u.t.}
+\]
 
-% \subsection{Modelo 3}
-% \subsubsection{Topologia}
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{topologias/modelo3.png}
-%     \caption{Topologia do Modelo 3}
-%     \label{fig:modelo3}
-% \end{figure}
+\[
+\mu \approx 2.86 \text{ clientes/u.t.}
+\]
 
-% \subsubsection{Solução Analítica}
+\[
+{b} = 10 \text{ clientes}
+\]
+
+\[
+\rho = \frac{\lambda}{\mu} = 0.7
+\]
+
+
+O número médio de clientes no sistema é calculado por:
+
+\begin{equation}
+L =
+\frac{\lambda \left(1 + b\rho^{\,b+1} - (b+1)\rho^{\,b}\right)}
+{(\mu-\lambda)\left(1-\rho^{\,b+1}\right)} \approx 2.10 
+\end{equation}
+
+O tempo médio que cada cliente passa no sistema, desconsiderando os que chegam e encontram a fila cheia, pode ser obtido pela equação:
+
+\[
+E[W] = \frac{L}{\lambda_a}
+\]
+
+Onde: 
+
+\[
+\lambda_a = \lambda \left(1-\pi_b\right) \approx 1.98
+\]
+
+Logo:
+
+\[
+E[W] \approx 1.06 \text{ u.t}
+\]
+
+
+\subsubsection{Resultados da Simulação}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Medida} & \textbf{Valor}\\
+        \hline
+        L & 2.1223516367762114 \\
+        \hline
+        E[W] & 1.0679721686761363\\
+        \hline
+        $E[W_Q]$ & 0.7116977904499656\\
+        \hline
+        $\textit{Drop Rate} $ &  0.017412819279805602\\
+        \hline
+    \end{tabular}
+    \caption{Resultados da simulação para o Modelo 1}
+    \label{tab:simulacao-modelo2}
+\end{table}
+\subsubsection{Tabela Comparativa}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Medida} & \textbf{Valor teórico} & \textbf{Valor simulado} & \textbf{Diferença (\%)} \\
+        \hline
+        $L$ & 2.10 & 2.1223516367762111 & 1.0643637 \\
+        \hline
+        $E[W]$ & 1.06 & 1.0679721686761363 & 0.7520914 \\
+        \hline
+    \end{tabular}
+    \caption{Tabela comparativa entre os valores teóricos e simulados para o Modelo 2}
+    \label{tab:comparacao-modelo2}
+\end{table}
+
+\subsection{Modelo 3}
+\subsubsection{Topologia}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{topologias/modelo3.png}
+    \caption{Topologia do Modelo 3}
+    \label{fig:modelo3}
+\end{figure}
+
+\subsubsection{Solução Analítica}
 % % Inserir aqui os cálculos da solução analítica para o Modelo 3
 
 % \subsubsection{Resultados da Simulação}

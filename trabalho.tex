@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{amsmath}
+\usepackage[brazil]{babel}
 \begin{document}
 
 \title{Trabalho Avaliação de Desempenho}
@@ -37,17 +38,17 @@ Temos como dados de entrada:
 \]
 
 \[
-{ E[X]} = 0.25 \text{ u.t.}
+E[X] = 0.25 \text{ u.t.}
 \]
 
 
 O tempo médio que cada cliente passa no sistema é calculado por:
 
 \[
-{E[W]} = \frac{E[X]}{1-\lambda\cdot{E[X]}} = 0.5 \text{ u.t}
+E[W] = \frac{E[X]}{1-\lambda\cdot E[X]} = 0.5 \text{ u.t}
 \]
 
-O número médio de clientes no sistema é calculado por::
+O número médio de clientes no sistema é calculado por:
 
 \[
 L = {E[W]}\cdot{\lambda} = 1 \text{ cliente}
@@ -88,7 +89,7 @@ E[W_Q] = E[W] - E[X] = 0.25 \text{ u.t.}
         \hline
         \textbf{Medida} & \textbf{Valor teórico} & \textbf{Valor simulado} & \textbf{Diferença (\%)} \\
         \hline
-        $E[W]$ & 0.5 & 0.5023682015753331 & 0,4736403 \\
+        $E[W]$ & 0.5 & 0.5023682015753331 & 0.4736403 \\
         \hline
         $L$ & 1.0 & 1.0057949821148777 & 0.5795 \\
         \hline
@@ -111,7 +112,7 @@ E[W_Q] = E[W] - E[X] = 0.25 \text{ u.t.}
 \end{figure}
 
 \subsubsection{Solução Analítica}
-O Modelo 1 corresponde a um sistema de filas M/M/1/b, composto por um único servidor, chegadas segundo um Processo de Poisson, tempos de serviço exponencialmente distribuídos e fila finita.
+O Modelo 2 corresponde a um sistema de filas M/M/1/b, composto por um único servidor, chegadas segundo um Processo de Poisson, tempos de serviço exponencialmente distribuídos e fila finita.
 
 Temos como dados de entrada:
 
@@ -236,7 +237,7 @@ E[W] \approx 1.06 \text{ u.t}
 \end{figure}
 
 \subsubsection{Solução Analítica}
-O Modelo 4 corresponde a um sistema de filas M/M/1, composto por dois servidores, chegadas segundo um Processo de Poisson e tempos de serviço exponencialmente distribuídos.
+O Modelo 4 corresponde a uma rede aberta formada por dois centros M/M/1 em série, composto por dois servidores, chegadas segundo um Processo de Poisson e tempos de serviço exponencialmente distribuídos.
 
 Temos como dados de entrada:
 
@@ -275,7 +276,7 @@ Logo:
 {E[W]} = 1.5 \text{ u.t}
 \]
 
-O número médio de clientes no sistema é calculado por::
+O número médio de clientes no sistema é calculado por:
 
 \[
 L = {E[W]}\cdot{\lambda} = 3 \text{ clientes}
@@ -313,10 +314,13 @@ L = {E[W]}\cdot{\lambda} = 3 \text{ clientes}
         $E[W]$ & 1.5 & 1.5100325860040056 & 0.668839067 \\
         \hline
     \end{tabular}
-    \caption{Tabela comparativa entre os valores teóricos e simulados para o Modelo 2}
+    \caption{Tabela comparativa entre os valores teóricos e simulados para o Modelo 4}
     \label{tab:comparacao-modelo4}
 \end{table}
-% \section{Conclusão}
+
+\section{Conclusão}
+
+A ferramenta de simulação JMT apresentou um ótimo resultado quando tendo os resultados comparados aos valores analíticos obtidos. A maior diferença de resultados foi de 1.06\%, demonstrando a confiabilidade dos resultados obtidos. 
 % % Conclusões do trabalho
 
 % \bibliographystyle{plain}
